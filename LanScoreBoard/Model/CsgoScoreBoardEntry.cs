@@ -5,34 +5,34 @@ namespace LanScoreBoard.Model
     public class CsgoScoreBoardEntry
     {
 
-        [JsonProperty("Names")]
+        [JsonProperty("names")]
         public string Names { get; set; }
 
-        [JsonProperty("Kills")]
+        [JsonProperty("kills")]
         public int Kills { get; set; }
 
-        [JsonProperty("Kills_Players")]
+        [JsonProperty("playerKills")]
         public int PlayerKills { get; set; }
 
-        [JsonProperty("Kills_Bots")]
+        [JsonProperty("botKills")]
         public int BotKills { get; set; }
 
-        [JsonProperty("Teamkills")]
+        [JsonProperty("teamkills")]
         public int Teamkills { get; set; }
 
-        [JsonProperty("Deaths")]
+        [JsonProperty("deaths")]
         public int Deaths { get; set; }
 
-        [JsonProperty("Bombs_Planted")]
+        [JsonProperty("plantedBombs")]
         public int PlantedBombs { get; set; }
 
-        [JsonProperty("Bombs_Exploded")]
+        [JsonProperty("explodedBombs")]
         public int ExplodedBombs { get; set; }
 
-        [JsonProperty("Bombs_Defused")]
+        [JsonProperty("defusedBombs")]
         public int DefusedBombs { get; set; }
 
-        [JsonProperty("MVPs")]
-        public string MVPs { get; set; }
+        [JsonProperty("mvpCount")]
+        public int MVPs { get; set; }
     }
 }

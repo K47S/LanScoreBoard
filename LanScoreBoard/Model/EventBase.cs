@@ -1,16 +1,17 @@
 ﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LanScoreBoard.Model
 {
-    public class SourceEvent : EventBase
-    {       
+    public class EventBase
+    {
         public int Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
-
-        [JsonProperty("steamId")]
-        public int SteamId { get; set; }
 
         [JsonProperty("event")]
         public string Event { get; set; }

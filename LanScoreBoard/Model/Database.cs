@@ -3,26 +3,17 @@
 
 namespace LanScoreBoard.Model
 {
-    public class Database
+    public class LiteDb : LiteDatabase
     {
-        private static Database _Instance;
+        private static LiteDb _Instance;
 
-        private LiteDatabase _Database;
-
-
-        public LiteDatabase LiteDatabase
-            { get{return _Database;}
-            }
-
-
-        private Database()
+        private LiteDb(string connectionString) : base(connectionString)
         {
-            _Database = new LiteDatabase(@"LanScoreboard.db");
         }
 
-        public static Database Instance
+        public static LiteDb Instance
         {
-            get { return _Instance ?? (_Instance = new Database()); }
+            get { return _Instance ?? (_Instance = new LiteDb(@"LanScoreboard.db")); }
         }
     }
 }
