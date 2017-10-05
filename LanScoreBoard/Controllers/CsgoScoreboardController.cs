@@ -34,8 +34,8 @@ namespace LanScoreBoard.Controllers
                 Names = string.Join(",", group.OrderByDescending(a=> a.Timestamp).Select(a => a.Name).Distinct()),
                 Mvp = group.Where(b => b.Event.Equals("round_mvp", StringComparison.OrdinalIgnoreCase)).Count(),
                 BombsPlanted = group.Where(b => b.Event.Equals("bomb_planted", StringComparison.OrdinalIgnoreCase)).Count(),
-                BombsExploded = group.Where(b => b.Event.Equals("bomb_defused", StringComparison.OrdinalIgnoreCase)).Count(),
-                BombsDefused = group.Where(b => b.Event.Equals("bomb_exploded", StringComparison.OrdinalIgnoreCase)).Count(),
+                BombsExploded = group.Where(b => b.Event.Equals("bomb_exploded", StringComparison.OrdinalIgnoreCase)).Count(),
+                BombsDefused = group.Where(b => b.Event.Equals("bomb_defused", StringComparison.OrdinalIgnoreCase)).Count(),
             }).Select(a => new CsgoScoreBoardEntry()
             {
                 Names = a.Names,
